@@ -1,16 +1,18 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Award } from 'lucide-react';
-import { Card } from './ui/card';
-import { achievements } from '../data/portfolio';
+import React from "react";
+import { motion } from "framer-motion";
+import { Award } from "lucide-react";
+import { Card } from "./ui/card";
+import { achievements } from "../data/portfolio";
 
 const Achievements = () => {
   return (
-    <section id="achievements" className="py-20 bg-gradient-to-br from-[#0b1220] to-[#0f172a]">
+    <section id="achievements" className="py-20 text-white relative">
+      {/* subtle separator (keeps single page feel) */}
       <div className="max-w-5xl mx-auto px-6">
+        <div className="h-px bg-white/10 mb-14" />
 
         <motion.h2
-          className="text-4xl md:text-5xl font-bold text-white text-center mb-12"
+          className="text-4xl md:text-5xl font-bold text-white text-center mb-12 tracking-tight"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -25,19 +27,24 @@ const Achievements = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ delay: idx * 0.08 }}
             >
-              <Card className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-white/20 transition">
+              <Card className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition duration-300">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
-                    <Award className="text-white" size={20} />
+                  {/* icon */}
+                  <div className="w-11 h-11 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center">
+                    <Award className="text-white/80" size={20} />
                   </div>
+
+                  {/* text */}
                   <div>
                     <h3 className="text-lg font-semibold text-white">
                       {a.title}
                     </h3>
-                    <span className="text-sm text-gray-400">{a.year}</span>
-                    <p className="text-gray-300 text-sm mt-2">
+
+                    <span className="text-sm text-white/60">{a.year}</span>
+
+                    <p className="text-white/70 text-sm mt-2 leading-relaxed">
                       {a.description}
                     </p>
                   </div>

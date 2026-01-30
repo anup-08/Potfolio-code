@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-import { Card } from './ui/card';
-import { skills } from '../data/portfolio';
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Card } from "./ui/card";
+import { skills } from "../data/portfolio";
 
 /* Animation variants */
 const containerVariants = {
@@ -20,7 +20,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 45,
       damping: 22,
       mass: 1,
@@ -34,7 +34,7 @@ const skillVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      type: 'spring',
+      type: "spring",
       stiffness: 65,
       damping: 24,
       mass: 0.6,
@@ -44,30 +44,32 @@ const skillVariants = {
 
 const Skills = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const categories = [
-    { title: 'Backend', list: skills.backend },
-    { title: 'Frontend', list: skills.frontend },
-    { title: 'Database', list: skills.database },
-    { title: 'Tools & Others', list: skills.tools },
+    { title: "Backend", list: skills.backend },
+    { title: "Frontend", list: skills.frontend },
+    { title: "Database", list: skills.database },
+    { title: "Tools & Others", list: skills.tools },
   ];
 
   return (
     <motion.section
       ref={ref}
       id="skills"
-      className="py-20 bg-gradient-to-br from-[#0b1220] to-[#0f172a]"
+      className="py-20 text-white relative"
       variants={containerVariants}
       initial="hidden"
-      animate={isInView ? 'visible' : 'hidden'}
+      animate={isInView ? "visible" : "hidden"}
     >
       <div className="max-w-6xl mx-auto px-6">
+        {/* subtle separator */}
+        <div className="h-px bg-white/10 mb-14" />
 
         {/* Title */}
         <motion.h2
           variants={cardVariants}
-          className="text-4xl md:text-5xl font-bold text-white text-center mb-14"
+          className="text-4xl md:text-5xl font-bold text-white text-center mb-14 tracking-tight"
         >
           Skills & Technologies
         </motion.h2>
@@ -80,7 +82,7 @@ const Skills = () => {
               variants={cardVariants}
               className="will-change-transform"
             >
-              <Card className="p-6 bg-white/5 border border-white/10 backdrop-blur-xl rounded-2xl">
+              <Card className="p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-white/20 transition duration-300">
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {cat.title}
                 </h3>
@@ -93,18 +95,22 @@ const Skills = () => {
                     <motion.span
                       key={skill}
                       variants={skillVariants}
-                      className="px-4 py-2 text-sm rounded-lg bg-white/10 text-gray-200 border border-white/10"
+                      className="
+                        px-4 py-2 text-sm rounded-xl
+                        bg-white/5 text-white/80
+                        border border-white/10
+                        hover:bg-white/10 hover:border-white/20
+                        transition
+                      "
                     >
                       {skill}
                     </motion.span>
                   ))}
                 </motion.div>
-
               </Card>
             </motion.div>
           ))}
         </motion.div>
-
       </div>
     </motion.section>
   );
