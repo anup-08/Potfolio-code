@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Card } from "./ui/card";
 import { personalInfo } from "../data/portfolio";
+import { Button } from "./ui/button";
+import { toast } from "../hooks/use-toast";
 
 const Contact = () => {
   return (
@@ -59,17 +61,29 @@ const Contact = () => {
           </Card>
         </div>
 
-        {/* SEND EMAIL BUTTON */}
-        <a
-          href={`mailto:${personalInfo.email}`}
-          className="inline-flex items-center gap-2 px-8 py-4 text-lg font-medium
-                     rounded-xl bg-indigo-600 hover:bg-indigo-700
-                     text-white shadow-lg shadow-indigo-600/20
-                     border border-white/10 transition"
-        >
-          <Send size={20} />
-          Send Email
-        </a>
+        {/* SEND EMAIL + COPY FALLBACK */}
+        <div className="flex items-center justify-center gap-3">
+          <a
+            href={`mailto:${personalInfo.email}`}
+            className="inline-flex items-center gap-2 px-8 py-4 text-lg font-medium rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-600/20 border border-white/10 transition"
+          >
+            <Send size={20} />
+            Send Email
+          </a>
+          <Button
+            className="h-auto px-8 py-4 text-lg rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg shadow-indigo-600/20"
+            onClick={async () => {
+              try {
+                await navigator.clipboard.writeText(personalInfo.email);
+                toast({ title: "Email copied", description: personalInfo.email });
+              } catch (e) {
+                window.prompt("Copy email address:", personalInfo.email);
+              }
+            }}
+          >
+            Copy Email
+          </Button>
+        </div>
       </div>
     </section>
   );

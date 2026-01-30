@@ -13,9 +13,15 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // ✅ FIXED smooth scroll (no header/footer glitch)
   const scrollTo = (id) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (!el) return;
+
+    const yOffset = -80; // header height
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
     setOpen(false);
   };
 
@@ -28,19 +34,21 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 
+      transform-gpu will-change-transform ${
         scrolled
           ? "bg-[#070B14]/60 backdrop-blur-xl border-b border-white/10"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo / Name */}
         <div className="flex items-center gap-3">
           <h1 className="font-extrabold text-white text-xl md:text-3xl tracking-tight">
             {personalInfo.name}
           </h1>
 
+          {/* ✅ Professional Open To Work */}
           {personalInfo.openToWork && (
             <Badge
               className="
@@ -58,7 +66,7 @@ const Header = () => {
           )}
         </div>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <button
@@ -79,7 +87,7 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Mobile */}
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden text-white"
           onClick={() => setOpen(!open)}

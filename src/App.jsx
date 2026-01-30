@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Achievements from "./components/Achievements";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { Toaster } from "./components/ui/toaster";
 
 const App = () => {
   return (
@@ -48,6 +49,8 @@ const App = () => {
         <Achievements />
         <Contact />
         <Footer />
+        {/* Toasts */}
+        <Toaster />
       </div>
     </div>
   );

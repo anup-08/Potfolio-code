@@ -74,25 +74,29 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* RIGHT IMAGE */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="flex justify-center md:justify-end"
         >
-          <div className="relative group">
-            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-indigo-500/40 via-purple-500/30 to-pink-500/30 opacity-70 blur-lg group-hover:opacity-100 transition" />
-
-            <div className="relative bg-[#070B14]/40 p-2 rounded-3xl border border-white/10 backdrop-blur-xl">
-              <img
-                src={personalInfo.image}
-                alt={personalInfo.name}
-                className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl group-hover:scale-[1.02] transition"
-              />
+          <div className="relative">
+            {/* Refined, attractive frame with brand accent */}
+            <div className="relative p-[1px] rounded-2xl bg-gradient-to-br from-primary/40 via-white/10 to-transparent">
+              <div className="rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 p-1 shadow-2xl">
+                <img
+                  src={personalInfo.image}
+                  alt={personalInfo.name}
+                  className="block w-80 md:w-96 aspect-square object-cover rounded-lg shadow-xl transition-transform duration-300 hover:scale-[1.015]"
+                />
+                {/* Subtle highlight strip */}
+                <div className="pointer-events-none mt-2 h-[2px] rounded-full bg-gradient-to-r from-primary/40 via-white/20 to-transparent" />
+              </div>
             </div>
           </div>
         </motion.div>
+
+
 
         {/* Scroll indicator */}
         <motion.button
