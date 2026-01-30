@@ -5,8 +5,15 @@ import { Button } from "./ui/button";
 import { personalInfo } from "../data/portfolio";
 
 const Hero = () => {
-  const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  // ✅ Stable smooth scroll (prevents header/footer glitch)
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    const headerOffset = 90; // fixed header height
+    const y = el.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+
+    window.scrollTo({ top: y, behavior: "smooth" });
   };
 
   return (
@@ -39,7 +46,7 @@ const Hero = () => {
           {/* CTA */}
           <div className="flex flex-wrap gap-4 mt-8">
             <Button
-              onClick={() => scrollTo("contact")}
+              onClick={() => scrollToSection("contact")}
               className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 text-lg shadow-lg shadow-indigo-600/20"
             >
               Get In Touch
@@ -74,6 +81,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
+        {/* RIGHT PHOTO */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,7 +89,6 @@ const Hero = () => {
           className="flex justify-center md:justify-end"
         >
           <div className="relative">
-            {/* Refined, attractive frame with brand accent */}
             <div className="relative p-[1px] rounded-2xl bg-gradient-to-br from-primary/40 via-white/10 to-transparent">
               <div className="rounded-xl bg-white/5 backdrop-blur-xl border border-white/10 p-1 shadow-2xl">
                 <img
@@ -89,18 +96,15 @@ const Hero = () => {
                   alt={personalInfo.name}
                   className="block w-80 md:w-96 aspect-square object-cover rounded-lg shadow-xl transition-transform duration-300 hover:scale-[1.015]"
                 />
-                {/* Subtle highlight strip */}
                 <div className="pointer-events-none mt-2 h-[2px] rounded-full bg-gradient-to-r from-primary/40 via-white/20 to-transparent" />
               </div>
             </div>
           </div>
         </motion.div>
 
-
-
         {/* Scroll indicator */}
         <motion.button
-          onClick={() => scrollTo("about")}
+          onClick={() => scrollToSection("about")}
           className="absolute bottom-6 left-1/2 -translate-x-1/2 p-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10"
           animate={{ y: [0, 12, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
