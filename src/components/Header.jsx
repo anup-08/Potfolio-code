@@ -51,15 +51,12 @@ const Header = () => {
           {/* ✅ Professional Open To Work */}
           {personalInfo.openToWork && (
             <Badge
-              className="
-                flex items-center gap-2 rounded-full px-3 py-1
-                bg-emerald-500/10 text-emerald-200
-                border border-emerald-500/25 font-medium
-              "
+              className="group animate-droplet-bob flex items-center gap-2 rounded-full px-3 py-1 bg-emerald-500/12 text-emerald-200 border border-emerald-400/35 font-medium shadow-[inset_0_0_12px_rgba(16,185,129,0.35)]"
             >
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-40 animate-ping" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+              <span className="relative h-3.5 w-3.5">
+                <span className="absolute inset-0 rounded-full bg-gradient-to-b from-emerald-400 to-emerald-500 shadow-sm" />
+                <span className="absolute top-[1px] left-[1px] h-1 w-1.5 rounded-full bg-white/60 opacity-80" />
+                <span className="absolute -inset-1 rounded-full ring-1 ring-emerald-300/40 opacity-0 group-hover:opacity-100 animate-ping" />
               </span>
               <span className="text-xs md:text-sm">Open to Work</span>
             </Badge>

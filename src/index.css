@@ -20,6 +20,17 @@ body {
         "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
         sans-serif;
     -webkit-font-smoothing: antialiased;
+/* Utility animations */
+@layer utilities {
+    @keyframes droplet-bob {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-1.5px); }
+    }
+    .animate-droplet-bob {
+        animation: droplet-bob 3s ease-in-out infinite;
+    }
+}
+
     -moz-osx-font-smoothing: grayscale;
     transition: background-color 0.3s ease, color 0.3s ease;
     overflow-x: hidden;
