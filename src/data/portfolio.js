@@ -4,8 +4,8 @@
 
 export const personalInfo = {
   name: "Anup kumar",
-  title: "Java Full Stack Developer",
-  tagline: "Building scalable applications with modern technologies",
+  title: "Backend Engineer | Java & Spring Boot",
+  tagline: "Designing scalable microservices, secure APIs, and distributed backend systems.",
   // 📸 TO CHANGE YOUR PHOTO: Replace this URL with your own image URL
   // Recommended size: 400x400px (square), formats: .jpg, .png, .webp
   // photo: "/photo.jpg",
@@ -24,13 +24,14 @@ export const personalInfo = {
 };
 
 export const aboutMe = {
-  description: "I’m a backend-focused Computer Science undergraduate with strong hands-on experience in building scalable and secure applications using Spring Boot and microservices. I enjoy designing clean RESTful APIs, implementing authentication systems, and continuously improving my problem-solving skills through real-world projects and DSA practice.",
+  description: "Backend-focused Computer Science undergraduate passionate about building scalable, secure, and high-performance backend systems. Experienced in designing REST APIs, microservices architecture, and authentication systems using Java and Spring Boot. Actively improving data structures, algorithms, and system design skills to become a production-ready backend engineer.",
   highlights: [
-    "Strong foundation in Java, Spring Boot, and REST API development",
-    "Hands-on experience with microservices, Kafka, and Keycloak security",
-    "Solved 350+ DSA problems using Java with consistent practice",
-    "Experience working with MySQL, MongoDB, and backend system design",
-    "Self-driven learner with real project-based development experience"
+    "Strong foundation in Java, Spring Boot, and scalable REST API development",
+    "Hands-on experience with microservices architecture and event-driven systems using Kafka",
+    "Implemented secure authentication & authorization using JWT and Keycloak",
+    "Solved 350+ DSA problems and actively improving system design skills",
+    "Experience with MySQL, MongoDB, and backend performance optimization",
+    "Focused on becoming a production-ready backend engineer",
   ]
 };
 
@@ -43,34 +44,37 @@ export const skills = {
     "Spring Security",
     "Hibernate",
     "JPA",
-    "REST APIs",
-    "Microservices",
-    "Spring Cloud",
-    "Spring AI",
-    "JWT",
+    "REST API Design",
+    "Microservices Architecture",
+    "JWT Authentication",
+    "Keycloak",
+    "Kafka (Event-driven)",
     "Maven",
     
-  ],
-  frontend: [
-    "JavaScript",
-    "React.js",
-    "HTML5",
-    "CSS3",
-    "Tailwind CSS"
   ],
   database: [
     "MySQL",
     "MongoDB"
   ],
+  devops: [
+    "Docker (Basic)",
+    "Kubernetes (Learning)",
+    "CI/CD Basics"
+  ],
+  frontend: [
+    "React.js (Basic)",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Tailwind CSS"
+  ],
+  
   tools: [
     "Git",
-    "Docker",
-    "Apache Kafka",
-    "Kubernetes",
-    "IntelliJ IDEA",
+    "GitHub",
     "Postman",
-    "Redis"
-  ]
+    "IntelliJ IDEA"
+  ],
 };
 
 
