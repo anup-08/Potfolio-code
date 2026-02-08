@@ -5,7 +5,7 @@
 export const personalInfo = {
   name: "Anup kumar",
   title: "Backend Engineer | Java & Spring Boot",
-  tagline: "Designing scalable microservices, secure APIs, and distributed backend systems.",
+  tagline: "Passionate about designing scalable microservices, secure authentication systems, and production-ready REST APIs with a focus on performance, clean architecture, and real-world backend engineering.",
   // 📸 TO CHANGE YOUR PHOTO: Replace this URL with your own image URL
   // Recommended size: 400x400px (square), formats: .jpg, .png, .webp
   // photo: "/photo.jpg",

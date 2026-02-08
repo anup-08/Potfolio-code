@@ -30,12 +30,11 @@ const Hero = () => {
           </h1>
 
           <h2 className="mt-3 text-2xl md:text-3xl font-semibold text-white/80">
-            Java Full Stack Developer
+            {personalInfo.title}
           </h2>
 
           <p className="mt-6 text-white/70 max-w-2xl text-lg leading-relaxed">
-            Building scalable backend systems and modern frontend experiences
-            using Spring Boot, React, and cloud-native tools.
+            {personalInfo.tagline}
           </p>
 
           <div className="flex items-center gap-2 mt-5 text-white/70">
