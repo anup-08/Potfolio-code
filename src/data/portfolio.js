@@ -10,7 +10,7 @@ export const personalInfo = {
   // Recommended size: 400x400px (square), formats: .jpg, .png, .webp
   // photo: "/photo.jpg",
   // alias for components expecting `personalInfo.image`
-  image: "/photo.jpg",
+  image: "/photo.jpeg",
   email: "kumaranup31082004@gmail.com",
   phone: "+91 8252058094",
   location: "Ramgarh , Jharkhand India",
