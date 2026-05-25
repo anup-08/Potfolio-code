@@ -81,6 +81,26 @@ export const skills = {
 export const projects = [
   {
     id: 1,
+    title: "URL Shortener",
+    description:
+      "Production-oriented URL Shortener service built using Spring Boot and Redis. Implemented Base62 short URL generation, Redis caching for low-latency redirects, rate limiting to prevent abuse, and real-time click tracking with optimized backend APIs. Designed scalable redirect handling and integrated responsive React frontend for URL management and analytics.",
+    image: "/url-shortener.jpg",
+    technologies: [
+      "Java",
+      "Spring Boot",
+      "Redis",
+      "REST APIs",
+      "MySQL",
+      "React",
+      "Tailwind CSS",
+      "Rate Limiting",
+      "System Design",
+      "Caching"
+    ],
+    github: "https://github.com/anup-08/URL-Shortener",
+  },
+  {
+    id: 2,
     title: "AI-Fitness Platform",
     description: "AI-powered fitness platform built using a microservices architecture. Designed secure REST APIs for user management and workout tracking, implemented role-based authentication with Keycloak, and enabled asynchronous communication using Apache Kafka for activity updates.",
     image: "/aifitness.jpg",
@@ -90,7 +110,7 @@ export const projects = [
     
   },
   {
-    id: 2,
+    id: 3,
     title: "Smart Job Referral",
     description: "Role-based job referral platform supporting Admin, Employee, and Job Seeker roles. Enables job posting, candidate referrals, and application management through secure REST APIs built with Spring Boot and Spring Security. Features a responsive React-based interface for smooth user interaction and efficient job tracking.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
@@ -99,7 +119,7 @@ export const projects = [
     
   },
   {
-    id: 3,
+    id: 4,
     title: "E-Learning Platform",
     description: "Web-based e-learning platform designed to manage online exams, user enrollment, and learning progress. Built secure REST APIs using Spring Boot for course management, authentication, and user operations, with role-based access control to protect learning resources.",
     image: "/elearning.png",
@@ -113,7 +133,7 @@ export const projects = [
     
   },
   {
-    id: 4,
+    id: 5,
     title: "Online Voting System",
     description: "Secure online voting application designed to manage elections, candidates, and voters through a structured workflow. Implemented authentication and authorization to ensure valid voting, prevent duplicate votes, and maintain data integrity using Spring Boot–based REST APIs.",
     image: "/onlinevote.jpg",
@@ -126,7 +146,7 @@ export const projects = [
     
   },
   {
-    id: 5,
+    id: 6,
     title: "Quiz App",
     description: "Interactive web quiz application built to test users’ knowledge with multiple-choice questions, live score tracking, and instant feedback. Designed with a clean and responsive UI using core web technologies.",
     image: "/quiz.jpg",
@@ -137,7 +157,7 @@ export const projects = [
     
   },
   {
-    id: 6,
+    id: 7,
     title: "Weather App",
     description: "Interactive weather application that lets users search current weather conditions by city using the OpenWeatherMap API. Displays real-time temperature, humidity, wind speed, and weather status with dynamic icons, built with core web technologies and API integration.",
     image: "/weather.jpg",
