@@ -4,15 +4,15 @@
 
 export const personalInfo = {
   name: "Anup kumar",
-  title: "Backend Engineer | Java & Spring Boot",
-  tagline: "Passionate about designing scalable microservices, secure authentication systems, and production-ready REST APIs with a focus on performance, clean architecture, and real-world backend engineering.",
+  title: "Full stack web developer ",
+  tagline: "Full Stack Developer passionate about building modern web applications with clean interfaces, robust APIs, and seamless user experiences, focused on performance, scalability, and solving real-world problems.",
   // 📸 TO CHANGE YOUR PHOTO: Replace this URL with your own image URL
   // Recommended size: 400x400px (square), formats: .jpg, .png, .webp
   // photo: "/photo.jpg",
   // alias for components expecting `personalInfo.image`
   image: "/photo.jpeg",
   email: "kumaranup31082004@gmail.com",
-  phone: "+91 8252058094",
+  phone: "+91 9288178326",
   location: "Ramgarh , Jharkhand India",
   linkedin: "https://www.linkedin.com/in/anup-kumar2004/",
   github: "https://github.com/anup-08",
@@ -24,14 +24,14 @@ export const personalInfo = {
 };
 
 export const aboutMe = {
-  description: "Backend-focused Computer Science undergraduate passionate about building scalable, secure, and high-performance backend systems. Experienced in designing REST APIs, microservices architecture, and authentication systems using Java and Spring Boot. Actively improving data structures, algorithms, and system design skills to become a production-ready backend engineer.",
+  description: "I’m a Full Stack Developer passionate about building modern, scalable, and user-friendly web applications. I work with Java, Spring Boot, React, JavaScript, and MySQL to create complete solutions from frontend interfaces to backend APIs. I enjoy solving real-world problems, learning new technologies, and turning ideas into functional digital experiences.",
   highlights: [
     "Strong foundation in Java, Spring Boot, and scalable REST API development",
     "Hands-on experience with microservices architecture and event-driven systems using Kafka",
     "Implemented secure authentication & authorization using JWT and Keycloak",
     "Solved 350+ DSA problems and actively improving system design skills",
     "Experience with MySQL, MongoDB, and backend performance optimization",
-    "Focused on becoming a production-ready backend engineer",
+    "Focused on becoming a production-ready full stack engineer",
   ]
 };
 
@@ -66,14 +66,16 @@ export const skills = {
     "JavaScript",
     "HTML",
     "CSS",
-    "Tailwind CSS"
+    "Tailwind CSS",
+    "Bootstrap"
   ],
   
   tools: [
     "Git",
     "GitHub",
     "Postman",
-    "IntelliJ IDEA"
+    "IntelliJ IDEA",
+    "VS Code"
   ],
 };
 
