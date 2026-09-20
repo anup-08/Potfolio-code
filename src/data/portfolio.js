@@ -62,7 +62,7 @@ export const skills = {
     "CI/CD Basics"
   ],
   frontend: [
-    "React.js (Basic)",
+    "React.js",
     "JavaScript",
     "HTML",
     "CSS",
